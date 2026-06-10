@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Catalog-Z</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .tm-about-wrap {
+      max-width: 900px;
+    }
+    .tm-about-grid {
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .tm-about-img-wrap {
+      flex: 0 0 380px;
+      max-width: 380px;
+    }
+    .tm-about-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .tm-about-content {
+      flex: 1;
+      min-width: 260px;
+    }
+    .tm-about-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 20px;
+    }
+    .tm-about-text {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 16px;
+    }
+    .tm-about-stats {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .tm-stat {
+      text-align: center;
+    }
+    .tm-stat-number {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      display: block;
+    }
+    .tm-stat-label {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .tm-team-section {
+      margin-top: 60px;
+    }
+    .tm-team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .tm-team-card {
+      flex: 0 0 200px;
+      text-align: center;
+    }
+    .tm-team-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 14px;
+      border: 3px solid var(--color-primary);
+    }
+    .tm-team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .tm-team-name {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+    .tm-team-role {
+      font-size: 0.8rem;
+      color: var(--color-primary);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader-wrapper"><div id="loader"></div></div>
+
+  <nav class="tm-nav" id="tm-nav">
+    <div class="tm-nav-inner">
+      <div class="tm-nav-logo">
+        <a href="index.html" class="tm-logo-link">
+          <span class="tm-logo-text">Catalog<span class="tm-logo-accent">Z</span></span>
+        </a>
+      </div>
+      <div class="tm-nav-search">
+        <form action="" class="tm-search-form">
+          <input type="search" class="tm-search-input" placeholder="Search photos, videos..." />
+          <button type="submit" class="tm-search-btn"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <button class="tm-nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <div class="tm-nav-links" id="navLinks">
+        <ul class="tm-nav-list">
+          <li class="tm-nav-item"><a href="index.html" class="tm-nav-link tm-nav-link--photos"><i class="fas fa-camera tm-nav-icon"></i> Photos</a></li>
+          <li class="tm-nav-item"><a href="videos.html" class="tm-nav-link tm-nav-link--videos"><i class="fas fa-video tm-nav-icon"></i> Videos</a></li>
+          <li class="tm-nav-item"><a href="about.html" class="tm-nav-link tm-nav-link--about tm-nav-link--active"><i class="fas fa-info-circle tm-nav-icon"></i> About</a></li>
+          <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link tm-nav-link--contact"><i class="fas fa-envelope tm-nav-icon"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="tm-main">
+    <div class="tm-container">
+      <div class="tm-section-header">
+        <div class="tm-section-header-inner">
+          <div class="tm-section-title-wrap">
+            <h1 class="tm-section-title">About Us</h1>
+            <p class="tm-section-subtitle">Who we are and what we do</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tm-about-wrap">
+        <div class="tm-about-grid">
+          <div class="tm-about-img-wrap">
+            <img src="https://picsum.photos/seed/aboutteam/760/500" alt="About Catalog-Z" class="tm-about-img" />
+          </div>
+          <div class="tm-about-content">
+            <h2 class="tm-about-title">We Love Photography &amp; Film</h2>
+            <p class="tm-about-text">
+              Catalog-Z is a community-driven gallery platform dedicated to showcasing the work
+              of talented photographers and videographers from around the world. Founded in 2018,
+              we have grown to host over 200,000 images and 45,000 video clips.
+            </p>
+            <p class="tm-about-text">
+              Our mission is simple: make beautiful visual content accessible to everyone. Whether
+              you are a professional seeking a portfolio or an enthusiast sharing your latest shots,
+              Catalog-Z gives your work the stage it deserves.
+            </p>
+            <p class="tm-about-text">
+              This template is built with Bootstrap 5 and is free for personal and commercial use.
+              Feel free to download, modify, and distribute it as you see fit.
+            </p>
+            <div class="tm-about-stats">
+              <div class="tm-stat">
+                <span class="tm-stat-number">200K+</span>
+                <span class="tm-stat-label">Photos</span>
+              </div>
+              <div class="tm-stat">
+                <span class="tm-stat-number">45K</span>
+                <span class="tm-stat-label">Videos</span>
+              </div>
+              <div class="tm-stat">
+                <span class="tm-stat-number">8,300</span>
+                <span class="tm-stat-label">Members</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tm-team-section">
+          <h2 class="tm-section-title">Our Team</h2>
+          <div class="tm-team-grid">
+            <div class="tm-team-card">
+              <div class="tm-team-avatar">
+                <img src="https://picsum.photos/seed/teamA/200/200" alt="Mia Renfield" />
+              </div>
+              <div class="tm-team-name">Mia Renfield</div>
+              <div class="tm-team-role">Creative Director</div>
+            </div>
+            <div class="tm-team-card">
+              <div class="tm-team-avatar">
+                <img src="https://picsum.photos/seed/teamB/200/200" alt="Theo Vasquez" />
+              </div>
+              <div class="tm-team-name">Theo Vasquez</div>
+              <div class="tm-team-role">Lead Developer</div>
+            </div>
+            <div class="tm-team-card">
+              <div class="tm-team-avatar">
+                <img src="https://picsum.photos/seed/teamC/200/200" alt="Lena Holt" />
+              </div>
+              <div class="tm-team-name">Lena Holt</div>
+              <div class="tm-team-role">Photo Editor</div>
+            </div>
+            <div class="tm-team-card">
+              <div class="tm-team-avatar">
+                <img src="https://picsum.photos/seed/teamD/200/200" alt="Carson Webb" />
+              </div>
+              <div class="tm-team-name">Carson Webb</div>
+              <div class="tm-team-role">Video Producer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="tm-footer">
+    <div class="tm-container">
+      <div class="tm-footer-grid">
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">About Catalog-Z</h3>
+          <p class="tm-footer-text">Catalog-Z is a free <a href="https://v5.getbootstrap.com/" class="tm-footer-link">Bootstrap 5</a> HTML template for photo and video websites.</p>
+        </div>
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">Our Links</h3>
+          <ul class="tm-footer-list">
+            <li><a href="#" class="tm-footer-list-link">Advertise</a></li>
+            <li><a href="#" class="tm-footer-list-link">Support</a></li>
+            <li><a href="#" class="tm-footer-list-link">Our Company</a></li>
+            <li><a href="#" class="tm-footer-list-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">Follow Us</h3>
+          <div class="tm-social-links">
+            <a href="#" class="tm-social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="tm-social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="tm-social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="tm-social-link"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="tm-footer-divider" />
+      <div class="tm-footer-bottom">
+        <div class="tm-footer-bottom-links">
+          <a href="#" class="tm-footer-bottom-link">Terms of Use</a>
+          <a href="#" class="tm-footer-bottom-link">Privacy Policy</a>
+        </div>
+        <p class="tm-copyright">Copyright &copy; 2020 Catalog-Z Company. All rights reserved.<br/>Designed by <a href="https://templatemo.com" class="tm-footer-link">TemplateMo</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

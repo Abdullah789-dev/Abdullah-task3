@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Catalog-Z</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .tm-contact-grid {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .tm-contact-form-wrap {
+      flex: 1;
+      min-width: 300px;
+    }
+    .tm-contact-info-wrap {
+      flex: 0 0 300px;
+    }
+    .tm-form-group {
+      margin-bottom: 20px;
+    }
+    .tm-form-label {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-text-light);
+      margin-bottom: 8px;
+    }
+    .tm-form-control {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--color-text);
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      padding: 11px 14px;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .tm-form-control:focus {
+      border-color: var(--color-primary);
+    }
+    textarea.tm-form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    .tm-contact-info-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+    .tm-contact-info-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      background: var(--color-primary);
+      border-radius: var(--border-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1rem;
+    }
+    .tm-contact-info-text h4 {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-dark);
+      margin-bottom: 4px;
+    }
+    .tm-contact-info-text p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+    .tm-form-success {
+      display: none;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: var(--border-radius);
+      padding: 14px 18px;
+      margin-top: 16px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader-wrapper"><div id="loader"></div></div>
+
+  <nav class="tm-nav" id="tm-nav">
+    <div class="tm-nav-inner">
+      <div class="tm-nav-logo">
+        <a href="index.html" class="tm-logo-link">
+          <span class="tm-logo-text">Catalog<span class="tm-logo-accent">Z</span></span>
+        </a>
+      </div>
+      <div class="tm-nav-search">
+        <form action="" class="tm-search-form">
+          <input type="search" class="tm-search-input" placeholder="Search photos, videos..." />
+          <button type="submit" class="tm-search-btn"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <button class="tm-nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <div class="tm-nav-links" id="navLinks">
+        <ul class="tm-nav-list">
+          <li class="tm-nav-item"><a href="index.html" class="tm-nav-link tm-nav-link--photos"><i class="fas fa-camera tm-nav-icon"></i> Photos</a></li>
+          <li class="tm-nav-item"><a href="videos.html" class="tm-nav-link tm-nav-link--videos"><i class="fas fa-video tm-nav-icon"></i> Videos</a></li>
+          <li class="tm-nav-item"><a href="about.html" class="tm-nav-link tm-nav-link--about"><i class="fas fa-info-circle tm-nav-icon"></i> About</a></li>
+          <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link tm-nav-link--contact tm-nav-link--active"><i class="fas fa-envelope tm-nav-icon"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="tm-main">
+    <div class="tm-container">
+      <div class="tm-section-header">
+        <div class="tm-section-header-inner">
+          <div class="tm-section-title-wrap">
+            <h1 class="tm-section-title">Contact Us</h1>
+            <p class="tm-section-subtitle">Get in touch with our team</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tm-contact-grid">
+        <div class="tm-contact-form-wrap">
+          <form class="tm-contact-form" id="contactForm" novalidate>
+            <div class="tm-form-group">
+              <label class="tm-form-label" for="contactName">Your Name</label>
+              <input type="text" id="contactName" class="tm-form-control" placeholder="Enter your full name" required />
+            </div>
+            <div class="tm-form-group">
+              <label class="tm-form-label" for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" class="tm-form-control" placeholder="your@email.com" required />
+            </div>
+            <div class="tm-form-group">
+              <label class="tm-form-label" for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" class="tm-form-control" placeholder="How can we help?" />
+            </div>
+            <div class="tm-form-group">
+              <label class="tm-form-label" for="contactMessage">Message</label>
+              <textarea id="contactMessage" class="tm-form-control" placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="tm-btn tm-btn-primary">Send Message</button>
+            <div class="tm-form-success" id="formSuccess">
+              Thank you! Your message has been sent. We'll get back to you soon.
+            </div>
+          </form>
+        </div>
+
+        <div class="tm-contact-info-wrap">
+          <div class="tm-contact-info-item">
+            <div class="tm-contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="tm-contact-info-text">
+              <h4>Address</h4>
+              <p>123 Gallery Lane<br />New York, NY 10001</p>
+            </div>
+          </div>
+          <div class="tm-contact-info-item">
+            <div class="tm-contact-info-icon"><i class="fas fa-phone"></i></div>
+            <div class="tm-contact-info-text">
+              <h4>Phone</h4>
+              <p>+1 (212) 555-0174</p>
+            </div>
+          </div>
+          <div class="tm-contact-info-item">
+            <div class="tm-contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div class="tm-contact-info-text">
+              <h4>Email</h4>
+              <p>hello@catalogz.com</p>
+            </div>
+          </div>
+          <div class="tm-contact-info-item">
+            <div class="tm-contact-info-icon"><i class="fas fa-clock"></i></div>
+            <div class="tm-contact-info-text">
+              <h4>Hours</h4>
+              <p>Mon–Fri: 9am – 6pm<br />Weekends: Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="tm-footer">
+    <div class="tm-container">
+      <div class="tm-footer-grid">
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">About Catalog-Z</h3>
+          <p class="tm-footer-text">Catalog-Z is a free <a href="https://v5.getbootstrap.com/" class="tm-footer-link">Bootstrap 5</a> HTML template for photo and video websites.</p>
+        </div>
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">Our Links</h3>
+          <ul class="tm-footer-list">
+            <li><a href="#" class="tm-footer-list-link">Advertise</a></li>
+            <li><a href="#" class="tm-footer-list-link">Support</a></li>
+            <li><a href="#" class="tm-footer-list-link">Our Company</a></li>
+            <li><a href="#" class="tm-footer-list-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">Follow Us</h3>
+          <div class="tm-social-links">
+            <a href="#" class="tm-social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="tm-social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="tm-social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="tm-social-link"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="tm-footer-divider" />
+      <div class="tm-footer-bottom">
+        <div class="tm-footer-bottom-links">
+          <a href="#" class="tm-footer-bottom-link">Terms of Use</a>
+          <a href="#" class="tm-footer-bottom-link">Privacy Policy</a>
+        </div>
+        <p class="tm-copyright">Copyright &copy; 2020 Catalog-Z Company. All rights reserved.<br/>Designed by <a href="https://templatemo.com" class="tm-footer-link">TemplateMo</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').style.display = 'block';
+      this.reset();
+    });
+  </script>
+</body>
+</html>

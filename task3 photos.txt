@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clocks - Photo Detail - Catalog-Z</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .tm-detail-grid {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .tm-detail-main {
+      flex: 1;
+      min-width: 300px;
+    }
+    .tm-detail-sidebar {
+      flex: 0 0 280px;
+    }
+    .tm-detail-hero {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .tm-detail-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .tm-detail-info {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+    }
+    .tm-detail-info span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tm-detail-info i {
+      color: var(--color-primary);
+    }
+    .tm-detail-title {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 14px;
+    }
+    .tm-detail-desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 24px;
+    }
+    .tm-detail-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tm-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      background: #f0f0f0;
+      border-radius: 20px;
+      color: var(--color-text-light);
+      transition: background var(--transition), color var(--transition);
+    }
+    .tm-tag:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+    .tm-thumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .tm-thumbnail {
+      width: calc(25% - 6px);
+      aspect-ratio: 1;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity var(--transition);
+    }
+    .tm-thumbnail.active,
+    .tm-thumbnail:hover {
+      opacity: 1;
+    }
+    .tm-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .tm-sidebar-section {
+      margin-bottom: 36px;
+    }
+    .tm-sidebar-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--color-primary);
+    }
+    .tm-related-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      align-items: center;
+    }
+    .tm-related-thumb {
+      width: 70px;
+      height: 55px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .tm-related-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .tm-related-info {}
+    .tm-related-title {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      transition: color var(--transition);
+    }
+    .tm-related-item:hover .tm-related-title {
+      color: var(--color-primary);
+    }
+    .tm-related-views {
+      font-size: 0.78rem;
+      color: var(--color-text-light);
+      margin-top: 3px;
+    }
+    .tm-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-text-light);
+      margin-bottom: 28px;
+      transition: color var(--transition);
+    }
+    .tm-back-btn:hover {
+      color: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+  <div id="loader-wrapper"><div id="loader"></div></div>
+
+  <nav class="tm-nav" id="tm-nav">
+    <div class="tm-nav-inner">
+      <div class="tm-nav-logo">
+        <a href="index.html" class="tm-logo-link">
+          <span class="tm-logo-text">Catalog<span class="tm-logo-accent">Z</span></span>
+        </a>
+      </div>
+      <div class="tm-nav-search">
+        <form action="" class="tm-search-form">
+          <input type="search" class="tm-search-input" placeholder="Search photos, videos..." />
+          <button type="submit" class="tm-search-btn"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <button class="tm-nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <div class="tm-nav-links" id="navLinks">
+        <ul class="tm-nav-list">
+          <li class="tm-nav-item"><a href="index.html" class="tm-nav-link tm-nav-link--active tm-nav-link--photos"><i class="fas fa-camera tm-nav-icon"></i> Photos</a></li>
+          <li class="tm-nav-item"><a href="videos.html" class="tm-nav-link tm-nav-link--videos"><i class="fas fa-video tm-nav-icon"></i> Videos</a></li>
+          <li class="tm-nav-item"><a href="about.html" class="tm-nav-link tm-nav-link--about"><i class="fas fa-info-circle tm-nav-icon"></i> About</a></li>
+          <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link tm-nav-link--contact"><i class="fas fa-envelope tm-nav-icon"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="tm-main">
+    <div class="tm-container">
+      <a href="index.html" class="tm-back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Photos
+      </a>
+
+      <div class="tm-detail-grid">
+        <div class="tm-detail-main">
+          <div class="tm-detail-hero">
+            <img src="https://picsum.photos/seed/clock/800/600" alt="Clocks" id="detailHeroImg" />
+          </div>
+          <div class="tm-thumbnails">
+            <div class="tm-thumbnail active" onclick="changeImg(this, 'https://picsum.photos/seed/clock/800/600')">
+              <img src="https://picsum.photos/seed/clock/200/200" alt="" />
+            </div>
+            <div class="tm-thumbnail" onclick="changeImg(this, 'https://picsum.photos/seed/clock2/800/600')">
+              <img src="https://picsum.photos/seed/clock2/200/200" alt="" />
+            </div>
+            <div class="tm-thumbnail" onclick="changeImg(this, 'https://picsum.photos/seed/clock3/800/600')">
+              <img src="https://picsum.photos/seed/clock3/200/200" alt="" />
+            </div>
+            <div class="tm-thumbnail" onclick="changeImg(this, 'https://picsum.photos/seed/clock4/800/600')">
+              <img src="https://picsum.photos/seed/clock4/200/200" alt="" />
+            </div>
+          </div>
+
+          <div style="margin-top:28px;">
+            <h1 class="tm-detail-title">Clocks</h1>
+            <div class="tm-detail-info">
+              <span><i class="far fa-calendar-alt"></i> 18 Oct 2020</span>
+              <span><i class="far fa-eye"></i> 9,906 views</span>
+              <span><i class="far fa-heart"></i> 342 likes</span>
+            </div>
+            <p class="tm-detail-desc">
+              A stunning collection of antique and modern timepieces captured in perfect detail.
+              These photographs explore the intricate mechanics and artistry of clockmaking through
+              the decades, from ornate Victorian mantle clocks to sleek contemporary designs.
+              Each image tells the story of time itself.
+            </p>
+            <div class="tm-detail-tags">
+              <a href="#" class="tm-tag">Clocks</a>
+              <a href="#" class="tm-tag">Antique</a>
+              <a href="#" class="tm-tag">Timepiece</a>
+              <a href="#" class="tm-tag">Macro</a>
+              <a href="#" class="tm-tag">Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="tm-detail-sidebar">
+          <div class="tm-sidebar-section">
+            <h3 class="tm-sidebar-title">Related Photos</h3>
+            <a href="photo-detail.html" class="tm-related-item">
+              <div class="tm-related-thumb"><img src="https://picsum.photos/seed/plant/140/110" alt="Plants" /></div>
+              <div class="tm-related-info">
+                <div class="tm-related-title">Plants</div>
+                <div class="tm-related-views"><i class="far fa-eye"></i> 16,100 views</div>
+              </div>
+            </a>
+            <a href="photo-detail.html" class="tm-related-item">
+              <div class="tm-related-thumb"><img src="https://picsum.photos/seed/morning1/140/110" alt="Morning" /></div>
+              <div class="tm-related-info">
+                <div class="tm-related-title">Morning</div>
+                <div class="tm-related-views"><i class="far fa-eye"></i> 12,460 views</div>
+              </div>
+            </a>
+            <a href="photo-detail.html" class="tm-related-item">
+              <div class="tm-related-thumb"><img src="https://picsum.photos/seed/pinky/140/110" alt="Pinky" /></div>
+              <div class="tm-related-info">
+                <div class="tm-related-title">Pinky</div>
+                <div class="tm-related-views"><i class="far fa-eye"></i> 11,402 views</div>
+              </div>
+            </a>
+            <a href="photo-detail.html" class="tm-related-item">
+              <div class="tm-related-thumb"><img src="https://picsum.photos/seed/perfume/140/110" alt="Perfumes" /></div>
+              <div class="tm-related-info">
+                <div class="tm-related-title">Perfumes</div>
+                <div class="tm-related-views"><i class="far fa-eye"></i> 12,860 views</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="tm-sidebar-section">
+            <h3 class="tm-sidebar-title">Most Viewed</h3>
+            <a href="photo-detail.html" class="tm-related-item">
+              <div class="tm-related-thumb"><img src="https://picsum.photos/seed/turtle88/140/110" alt="Turtle" /></div>
+              <div class="tm-related-info">
+                <div class="tm-related-title">Turtle</div>
+                <div class="tm-related-views"><i class="far fa-eye"></i> 121,300 views</div>
+              </div>
+            </a>
+            <a href="photo-detail.html" class="tm-related-item">
+              <div class="tm-related-thumb"><img src="https://picsum.photos/seed/seaside/140/110" alt="Sea" /></div>
+              <div class="tm-related-info">
+                <div class="tm-related-title">Sea</div>
+                <div class="tm-related-views"><i class="far fa-eye"></i> 118,006 views</div>
+              </div>
+            </a>
+            <a href="photo-detail.html" class="tm-related-item">
+              <div class="tm-related-thumb"><img src="https://picsum.photos/seed/purple44/140/110" alt="Purple" /></div>
+              <div class="tm-related-info">
+                <div class="tm-related-title">Purple</div>
+                <div class="tm-related-views"><i class="far fa-eye"></i> 107,510 views</div>
+              </div>
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="tm-footer">
+    <div class="tm-container">
+      <div class="tm-footer-grid">
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">About Catalog-Z</h3>
+          <p class="tm-footer-text">Catalog-Z is a free <a href="https://v5.getbootstrap.com/" class="tm-footer-link">Bootstrap 5</a> HTML template for photo and video websites.</p>
+        </div>
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">Our Links</h3>
+          <ul class="tm-footer-list">
+            <li><a href="#" class="tm-footer-list-link">Advertise</a></li>
+            <li><a href="#" class="tm-footer-list-link">Support</a></li>
+            <li><a href="#" class="tm-footer-list-link">Our Company</a></li>
+            <li><a href="#" class="tm-footer-list-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">Follow Us</h3>
+          <div class="tm-social-links">
+            <a href="#" class="tm-social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="tm-social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="tm-social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="tm-social-link"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="tm-footer-divider" />
+      <div class="tm-footer-bottom">
+        <div class="tm-footer-bottom-links">
+          <a href="#" class="tm-footer-bottom-link">Terms of Use</a>
+          <a href="#" class="tm-footer-bottom-link">Privacy Policy</a>
+        </div>
+        <p class="tm-copyright">Copyright &copy; 2020 Catalog-Z Company. All rights reserved.<br/>Designed by <a href="https://templatemo.com" class="tm-footer-link">TemplateMo</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function changeImg(el, src) {
+      document.getElementById('detailHeroImg').src = src;
+      document.querySelectorAll('.tm-thumbnail').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+    }
+  </script>
+</body>
+</html>

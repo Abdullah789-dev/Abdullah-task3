@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalog-Z - Photo &amp; Video Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section loader-section-left"></div>
+    <div class="loader-section loader-section-right"></div>
+  </div>
+
+  <!-- Top Navigation -->
+  <nav class="tm-nav" id="tm-nav">
+    <div class="tm-nav-inner">
+      <div class="tm-nav-logo">
+        <a href="index.html" class="tm-logo-link">
+          <span class="tm-logo-text">Catalog<span class="tm-logo-accent">Z</span></span>
+        </a>
+      </div>
+
+      <div class="tm-nav-search">
+        <form action="" class="tm-search-form">
+          <input type="search" class="tm-search-input" placeholder="Search photos, videos..." />
+          <button type="submit" class="tm-search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <button class="tm-nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="tm-nav-links" id="navLinks">
+        <ul class="tm-nav-list">
+          <li class="tm-nav-item">
+            <a href="index.html" class="tm-nav-link tm-nav-link--active tm-nav-link--photos">
+              <i class="fas fa-camera tm-nav-icon"></i> Photos
+            </a>
+          </li>
+          <li class="tm-nav-item">
+            <a href="videos.html" class="tm-nav-link tm-nav-link--videos">
+              <i class="fas fa-video tm-nav-icon"></i> Videos
+            </a>
+          </li>
+          <li class="tm-nav-item">
+            <a href="about.html" class="tm-nav-link tm-nav-link--about">
+              <i class="fas fa-info-circle tm-nav-icon"></i> About
+            </a>
+          </li>
+          <li class="tm-nav-item">
+            <a href="contact.html" class="tm-nav-link tm-nav-link--contact">
+              <i class="fas fa-envelope tm-nav-icon"></i> Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="tm-main">
+    <div class="tm-container">
+
+      <!-- Section Header -->
+      <div class="tm-section-header">
+        <div class="tm-section-header-inner">
+          <div class="tm-section-title-wrap">
+            <h1 class="tm-section-title">Latest Photos</h1>
+            <p class="tm-section-subtitle">Page 1 of 200</p>
+          </div>
+          <div class="tm-section-sort">
+            <label class="tm-sort-label">Sort by:</label>
+            <select class="tm-sort-select">
+              <option>Newest First</option>
+              <option>Most Viewed</option>
+              <option>Oldest First</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="tm-gallery">
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/clock/400/320" alt="Clocks" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Clocks</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 18 Oct 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 9,906 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/plant/400/320" alt="Plants" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Plants</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 14 Oct 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 16,100 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/morning1/400/320" alt="Morning" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Morning</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 12 Oct 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 12,460 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/pinky/400/320" alt="Pinky" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Pinky</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 10 Oct 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 11,402 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/hangers/400/320" alt="Hangers" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Hangers</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 24 Sep 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 16,008 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/perfume/400/320" alt="Perfumes" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Perfumes</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 20 Sep 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 12,860 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/busride/400/320" alt="Bus" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Bus</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 16 Sep 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 10,900 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/newyork/400/320" alt="New York" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">New York</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 12 Sep 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 11,300 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/abstract1/400/320" alt="Abstract" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Abstract</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 10 Sep 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 42,700 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/flowers22/400/320" alt="Flowers" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Flowers</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 8 Sep 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 11,402 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/rosy123/400/320" alt="Rosy" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Rosy</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 4 Sep 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 32,906 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/rocky55/400/320" alt="Rocki" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Rocki</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 28 Aug 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 50,700 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/purple44/400/320" alt="Purple" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Purple</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 22 Aug 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 107,510 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/seaside/400/320" alt="Sea" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Sea</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 14 Aug 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 118,006 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/turtle88/400/320" alt="Turtle" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Turtle</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 9 Aug 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 121,300 views</span>
+          </div>
+        </div>
+
+        <div class="tm-gallery-item">
+          <figure class="tm-gallery-figure effect-ming">
+            <img src="https://picsum.photos/seed/peace99/400/320" alt="Peace" class="tm-gallery-img" />
+            <figcaption class="tm-gallery-caption">
+              <h2 class="tm-gallery-item-title">Peace</h2>
+              <a href="photo-detail.html" class="tm-btn tm-btn-primary">View more</a>
+            </figcaption>
+          </figure>
+          <div class="tm-gallery-meta">
+            <span class="tm-gallery-meta-date"><i class="far fa-calendar-alt"></i> 3 Aug 2020</span>
+            <span class="tm-gallery-meta-views"><i class="far fa-eye"></i> 21,204 views</span>
+          </div>
+        </div>
+
+      </div><!-- end gallery -->
+
+      <!-- Pagination -->
+      <div class="tm-pagination-wrap">
+        <nav class="tm-pagination" aria-label="Page navigation">
+          <a href="#" class="tm-paging-link tm-paging-prev disabled" aria-disabled="true">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+          <a href="#" class="tm-paging-link tm-paging-link--active">1</a>
+          <a href="#" class="tm-paging-link">2</a>
+          <a href="#" class="tm-paging-link">3</a>
+          <a href="#" class="tm-paging-link">4</a>
+          <a href="#" class="tm-paging-link tm-paging-next">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </nav>
+      </div>
+
+    </div><!-- end container -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="tm-footer">
+    <div class="tm-container">
+      <div class="tm-footer-grid">
+
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">About Catalog-Z</h3>
+          <p class="tm-footer-text">
+            Catalog-Z is a free <a href="https://v5.getbootstrap.com/" class="tm-footer-link">Bootstrap 5</a>
+            HTML template for photo and video websites. Use this layout freely for front-end
+            integration with any kind of CMS website.
+          </p>
+        </div>
+
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">Our Links</h3>
+          <ul class="tm-footer-list">
+            <li><a href="#" class="tm-footer-list-link">Advertise</a></li>
+            <li><a href="#" class="tm-footer-list-link">Support</a></li>
+            <li><a href="#" class="tm-footer-list-link">Our Company</a></li>
+            <li><a href="#" class="tm-footer-list-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="tm-footer-col">
+          <h3 class="tm-footer-heading">Follow Us</h3>
+          <div class="tm-social-links">
+            <a href="https://facebook.com" class="tm-social-link" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" class="tm-social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" class="tm-social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://pinterest.com" class="tm-social-link" aria-label="Pinterest">
+              <i class="fab fa-pinterest-p"></i>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- end footer-grid -->
+
+      <hr class="tm-footer-divider" />
+
+      <div class="tm-footer-bottom">
+        <div class="tm-footer-bottom-links">
+          <a href="#" class="tm-footer-bottom-link">Terms of Use</a>
+          <a href="#" class="tm-footer-bottom-link">Privacy Policy</a>
+        </div>
+        <p class="tm-copyright">
+          Copyright &copy; 2020 Catalog-Z Company. All rights reserved.<br />
+          Designed by <a href="https://templatemo.com" class="tm-footer-link">TemplateMo</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
